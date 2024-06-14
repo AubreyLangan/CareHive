@@ -16,6 +16,7 @@ const Footer = () => {
                     <Col lg="6" className="text-center text-lg-end">
                         <ul className="list-unstyled mb-0">
                             <li><a href="/" className="text-dark">Home</a></li>
+                            <li><a href="/about" className="text-dark">About</a></li>
                             <li><a href="/tips" className="text-dark">Tips</a></li>
                             <li><a href="/activities" className="text-dark">Activities</a></li>
                             <li><a href="/community" className="text-dark">Community</a></li>

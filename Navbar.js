@@ -12,16 +12,19 @@ const CustomNavbar = () => {
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='me-auto'>
                         <LinkContainer to="/">
-                            <Nav.Link>Home</Nav.Link>
+                            <Nav.Link><i className='fas fa-home'></i>Home</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/about">
+                            <Nav.Link><i className='fas fa-info-circle'></i>About</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/tips">
-                            <Nav.Link>Tips</Nav.Link>
+                            <Nav.Link><i className='fas fa-lightbulb'></i>Tips</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/activities">
-                            <Nav.Link>Activities</Nav.Link>
+                            <Nav.Link><i className='fas fa-gamepad'></i>Activities</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/community">
-                            <Nav.Link>Community</Nav.Link>
+                            <Nav.Link><i className='fas fa-users'></i>Community</Nav.Link>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
