@@ -1,0 +1,31 @@
+.random-tip-generator {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+}
+
+.random-tip-generator h2 {
+    color: #ff69b4;
+}
+
+.tip {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
