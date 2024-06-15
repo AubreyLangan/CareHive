@@ -1,0 +1,48 @@
+.about-page {
+    padding: 2rem;
+    color: #333;
+}
+
+.about-page .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-page .intro h1 {
+    color: #ff69b4;
+}
+
+.about-page .mission,
+.about-page .features,
+.about-page .contact {
+    margin-bottom: 2rem;
+}
+
+.about-page .mission h2,
+.about-page .features h2,
+.about-page .contact h2 {
+    color: #007bff;
+}
+
+.feature-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.feature-card .card-title {
+    color: #ff69b4;
+}
+
+.feature-card .card-text {
+    color: #555;
+}
+
+.about-page .contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-page .contact a:hover {
+    text-decoration: underline;
+}
