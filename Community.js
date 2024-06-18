@@ -1,57 +1,57 @@
 import React, { useEffect, useState } from "react";
-import firebase from './firebase';
+import { db, firebase } from "../Firebase/firebase";
+import { collection, addDoc, serverTimestamp, query, orderBy, onSnapshot } from 'firebase/firestore';
 import './Community.css';
-import { Await } from "react-router-dom";
+
 
 const Community = () => {
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
 
     useEffect(() => {
-        const fetchMessages = async () => {
-            const messagesCollection = await firebase.firestore().collection('messages').get();
-            setMessages(messagesCollection.docs.map(doc => doc.data()));
-        };
-        fetchMessages();
+        const q = query(collection(db, 'messages'), orderBy('timestamp', 'desc'));
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+            setMessages(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+        });
+
+        return () => unsubscribe();
     }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await firebase.firestore().collection('messages').add({
-            text: newMessage,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        });
-        setNewMessage('');
-        const messagesCollection = await firebase.firestore().collection('messages').get();
-        setMessages(messagesCollection.docs.map(doc => doc.data()));
+
+        try {
+            await addDoc(collection(db, 'messages'), {
+                text: newMessage,
+                timestamp: serverTimestamp()
+            });
+            setNewMessage('');
+        } catch (error) {
+            console.error('Error adding message: ', error);
+        }
     };
 
     return (
-        <div>
-            <div>
-                <h1>Community</h1>
-                <p>
-                    Join our community to connect with other parents and share your experiences.
-                </p>
-            </div>
-            <div className="community-page">
-                <h2>Community Chat</h2>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        value={newMessage}
-                        onChange={(e) => setNewMessage(e.target.value)}
-                        placeholder="Type your message..."
-                    />
-                    <button type="submit">Post</button>
-                </form>
-                <div className="messages">
-                    {messages.map((message, index) => (
-                        <div key={index} className="message">
-                            {message.text}
-                        </div>
-                    ))}
-                </div>
+        <div className="community-page">
+            <h1>Community</h1>
+            <p>
+                Join our community to connect with other parensts and share your experiences.
+            </p>
+            <h2>Community Chat</h2>
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={newMessage}
+                    onChange={(e) => setNewMessage(e.target.value)}
+                    placeholder="Type your message..."
+                />
+            </form>
+            <div className="messages">
+                {messages.map((message) => (
+                    <div key={message.id} className="message">
+                        {message.text}
+                    </div>
+                ))}
             </div>
         </div>
     );
