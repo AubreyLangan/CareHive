@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Activities.css';
 
 const activities = {
@@ -46,6 +47,20 @@ const Activities = () => {
                     </Row>
                 </div>
             ))}
+
+            <Row className="mt-4">
+                <Col md={6}>
+                    <Card className="latest-card">
+                        <Card.Body>
+                            <Card.Title>Activity of the Day</Card.Title>
+                            <Card.Text>Check out our latest activity for something to do as a family.</Card.Text>
+                            <Link to="/activities">
+                                <button className="btn btn-primary">Read More</button>
+                            </Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
         </Container>
     );
 };
