@@ -9,6 +9,7 @@ import Tips from './Pages/Tips';
 import Activities from './Pages/Activities';
 import Community from './Pages/Community';
 import Register from './Pages/Register';
+import Activities0To2 from './Pages/Activities0to2';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path='/activities' element={<Activities />} />
             <Route path='/community' element={<Community />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/activities/0-2' element={<Activities0To2 />} />
           </Routes>
         </div>
         <Footer />
