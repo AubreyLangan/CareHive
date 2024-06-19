@@ -2,8 +2,14 @@ import React from "react";
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import './Home.css';
 import RandomTipGenerator from "../Components/RandomTipGenerator";
+import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    const handleJoinNowClick = () => {
+        navigate('/register');
+    };
     return (
         <Container className="home">
             <div className="welcome-banner">
@@ -11,7 +17,7 @@ const Home = () => {
                 <p>
                     Your one-stop solution for parenting tips, activities, and community support.
                 </p>
-                <Button variant="primary">Join Now</Button>
+                <button className="btn btn-primary" onClick={handleJoinNowClick}>Join Now</button>
             </div>
             <section className="introduction">
                 <h2>About CareHive</h2>
@@ -55,7 +61,20 @@ const Home = () => {
                             <Card.Body>
                                 <Card.Title>Tip of the Day</Card.Title>
                                 <Card.Text>Check out our latest parenting tip to make your life easier.</Card.Text>
-                                <Button variant="link">Read more</Button>
+                                <Link to="/tips">
+                                    <button className="btn btn-primary">Read More</button>
+                                </Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={6}>
+                        <Card className="latest-card">
+                            <Card.Body>
+                                <Card.Title>Activity of the Day</Card.Title>
+                                <Card.Text>Check out our latest activity for something to do as a family.</Card.Text>
+                                <Link to="/activities">
+                                    <button className="btn btn-primary">Read More</button>
+                                </Link>
                             </Card.Body>
                         </Card>
                     </Col>
