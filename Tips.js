@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import './Tips.css';
 
 const tips = [
@@ -26,19 +25,6 @@ const Tips = () => {
                         </Card>
                     </Col>
                 ))}
-            </Row>
-            <Row className="mt-4">
-                <Col md={6}>
-                    <Card className="latest-card">
-                        <Card.Body>
-                            <Card.Title>Tip of the Day</Card.Title>
-                            <Card.Text>Check out our latest parenting tip to make your life easier.</Card.Text>
-                            <Link to="/tips">
-                                <button className="btn btn-primary">Read More</button>
-                            </Link>
-                        </Card.Body>
-                    </Card>
-                </Col>
             </Row>
         </Container>
     );
