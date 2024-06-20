@@ -1,6 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
+const activities9To12 = [
+    {title: "Science Experiments", description: "Conduct fun and safe science experiments."},
+    {title: "Board Games", description: "Play board games that require strategy and thinking."}
+];
+
 const Activities9To12 = () => {
     return (
         <Container>
