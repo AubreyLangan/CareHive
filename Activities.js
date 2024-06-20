@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import './Activities.css';
-import { Link } from "react-router-dom";
 
 const ageGroups = [
     {ageRange: '0-2', label: 'Ages 0-2', link: '/activities/0-2'},
