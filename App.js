@@ -10,6 +10,10 @@ import Activities from './Pages/Activities';
 import Community from './Pages/Community';
 import Register from './Pages/Register';
 import Activities0To2 from './Pages/Activities0to2';
+import Activities3to5 from './Pages/Activities3to5';
+import Activities6To8 from './Pages/Activities6to8';
+import Activities9to12 from './Pages/Activities9to12';
+import Activities13 from './Pages/Activities13';
 import './App.css';
 
 function App() {
@@ -26,6 +30,10 @@ function App() {
             <Route path='/community' element={<Community />} />
             <Route path='/register' element={<Register />} />
             <Route path='/activities/0-2' element={<Activities0To2 />} />
+            <Route path='/activities/3-5' element={<Activities3to5 />} />
+            <Route path='/activities/6-8' element={<Activities6To8 />} />
+            <Route path='activities/9-12' element={<Activities9to12 />} />
+            <Route path='activities/13' element={<Activities13 />} />
           </Routes>
         </div>
         <Footer />
