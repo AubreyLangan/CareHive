@@ -11,7 +11,7 @@ const Activities9To12 = () => {
         <Container>
             <h1>Activities for Ages 9-12</h1>
             <Row>
-                {addEventListener.map((activity, index) => (
+                {activities9To12.map((activity, index) => (
                     <Col key={index} sm={12} md={6} lg={4} className="mb-4">
                         <Card className="activity-card">
                             <Card.Body>
