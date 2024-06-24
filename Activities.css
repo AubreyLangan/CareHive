@@ -1,15 +1,12 @@
-.activities {
-    background-color: #add8e6;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px auto;
-    max-width: 800px;
+.age-group-card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
-.activities h1 {
-    color: #ff69b4;
+.age-group-card:hover {
+    transform: scale(1.05);
 }
 
-.activities p {
-    color: #333;
+.activity-card {
+    height: 100%;
 }
