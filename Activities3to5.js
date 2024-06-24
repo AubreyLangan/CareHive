@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const activities3To5 = [
     {title: "Building Blocks", description: "Build towers and structures with blocks."},
@@ -22,6 +23,11 @@ const Activities3To5 = () => {
                     </Col>
                 ))}
             </Row>
+            <div className="text-center mt-4">
+                <Link to="/activities">
+                    <Button variant="primary">Back to Activities</Button>
+                </Link>
+            </div>
         </Container>
     );
 };
