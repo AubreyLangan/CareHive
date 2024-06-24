@@ -1,5 +1,6 @@
 import React from "react";
-import { Card, Container, Row, Col } from 'react-bootstrap';
+import { Card, Container, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const activities0To2 = [
     { title: "Sensory Play", description: "Engage in sensory play with safe household items."},
@@ -22,6 +23,11 @@ const Activities0To2 = () => {
                     </Col>
                 ))}
             </Row>
+            <div className="text-center mt-4">
+                <Link to="/activities">
+                    <Button variant="primary">Back to Activities</Button>
+                </Link>
+            </div>
         </Container>
     );
 };
