@@ -2,12 +2,34 @@
   text-align: center;
 }
 
+body {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #ffffff;
+  --text-color: #212529;
+  --link-color: #007bff;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--secondary-color) !important;
+}
+
 .content {
+  background-color: var(--background-color);
+  color: var(--text-color);
   padding: 20px;
+}
+
+.btn-primary {
+  background-color: var(--link-color);
+  border-color: var(--link-color);
 }
 
 footer {
   padding: 10px 0;
-  background-color: #f8f9fa;
-  border-top: 1px solid #eaeaea;
 }
