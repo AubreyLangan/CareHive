@@ -12,7 +12,7 @@ const CustomNavbar = () => {
         document.body.classList.toggle('colorblind-mode', !colorblindMode);
     };
     return (
-        <Navbar bg='light' expand='lg'>
+        <Navbar bg='dark' expand='lg' role='navigation'>
             <Container>
                 <Navbar.Brand href='/'></Navbar.Brand>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -34,7 +34,12 @@ const CustomNavbar = () => {
                             <Nav.Link><i className='fas fa-users'></i>Community</Nav.Link>
                         </LinkContainer>
                     </Nav>
-                    <Button variant="outline-secoondary" onClick={toggleColorblindMode}>
+                    <Button 
+                        variant="outline-secoondary" 
+                        onClick={toggleColorblindMode}>
+                        aria-pressed={colorblindMode}
+                        aria-label="Toggle colorblind mode"
+                        
                         {colorblindMode ? 'Default Mode' : 'Colorblind Mode'}
                     </Button>
                 </Navbar.Collapse>
