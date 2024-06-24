@@ -1,0 +1,26 @@
+body.colorblind-mode {
+    --primary-color: #000000;
+    --secondary-color: #FFFFFF;
+    --background-color: #FFFF00;
+    --text-color: #000000;
+    --link-color: #1A73E8;
+}
+
+body.colorblind-mode .navbar {
+    background-color: var(--primary-color);
+}
+
+body.colorblind-mode .navbar-brand,
+body.colorblind-mode .nav-link {
+    color: var(--secondary-color) !important;
+}
+
+body.colorblind-mode .content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.colorblind-mode .btn-primary {
+    background-color: var(--link-color);
+    border-color: var(--link-color);
+}
