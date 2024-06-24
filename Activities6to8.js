@@ -1,7 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-const activities6To8 = () => {
+const activities6To8 = [
+    { title: "Outdoor Games", description: "Play tag, hide and seek, and other outdoor games."},
+    { title: "Simple Cooking", desscription: "Make easy recipes like sandwiches or fruit salad."}
+];
+
+const Activities6To8 = () => {
     return (
         <Container>
             <h1>Activities for Ages 6-8</h1>
@@ -13,7 +18,7 @@ const activities6To8 = () => {
                                 <Card.Title>{activity.title}</Card.Title>
                                 <Card.Text>{activity.description}</Card.Text>
                             </Card.Body>
-                        </Card>
+                        </Card> 
                     </Col>
                 ))}
             </Row>
@@ -21,4 +26,4 @@ const activities6To8 = () => {
     );
 };
 
-export default activities6To8;
+export default Activities6To8;
