@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const activities9To12 = [
     {title: "Science Experiments", description: "Conduct fun and safe science experiments."},
@@ -22,6 +23,11 @@ const Activities9To12 = () => {
                     </Col>
                 ))}
             </Row>
+            <div className="text-center mt-4">
+                <Link to="/activities">
+                    <Button variant="primary">Back to Activities</Button>
+                </Link>
+            </div>
         </Container>
     );
 };
