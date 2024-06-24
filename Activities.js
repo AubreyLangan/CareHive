@@ -8,7 +8,7 @@ const ageGroups = [
     {ageRange: '3-5', label: 'Ages 3-5', link: '/activities/3-5'},
     {ageRange: '6-8', label: 'Ages 6-8', link: '/activities/6-8'},
     {ageRange: '9-12', label: 'Ages 9-12', link: '/activities/9-12'},
-    {ageRange: '13+', label: 'Ages 13+', link: '/activities/13+'}
+    {ageRange: '13plus', label: 'Ages 13', link: '/activities/13plus'}
 ];
 
 const Activities = () => {
