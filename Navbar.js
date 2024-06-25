@@ -14,8 +14,8 @@ const CustomNavbar = () => {
     return (
         <Navbar bg='dark' expand='lg' role='navigation'>
             <Container>
-                <Navbar.Brand href='/'></Navbar.Brand>
-                <Navbar.Toggle aria-controls='basic-navbar-nav' />
+                <Navbar.Brand href='/' aria-label="CareHive Home"></Navbar.Brand>
+                <Navbar.Toggle aria-controls='basic-navbar-nav' aria-label="Toggle navigation" />
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='me-auto'>
                         <LinkContainer to="/">
@@ -39,7 +39,7 @@ const CustomNavbar = () => {
                         onClick={toggleColorblindMode}>
                         aria-pressed={colorblindMode}
                         aria-label="Toggle colorblind mode"
-                        
+
                         {colorblindMode ? 'Default Mode' : 'Colorblind Mode'}
                     </Button>
                 </Navbar.Collapse>
