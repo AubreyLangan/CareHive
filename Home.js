@@ -10,6 +10,7 @@ const Home = () => {
     const handleJoinNowClick = () => {
         navigate('/register');
     };
+
     return (
         <Container className="home">
             <div className="welcome-banner">
@@ -62,7 +63,7 @@ const Home = () => {
                                 <Card.Title>Tip of the Day</Card.Title>
                                 <Card.Text>Check out our latest parenting tip to make your life easier.</Card.Text>
                                 <Link to="/tips">
-                                    <button className="btn btn-primary">Read More</button>
+                                    <button className="btn btn-primary" aria-label="Read more about the tip of the day">Read More</button>
                                 </Link>
                             </Card.Body>
                         </Card>
@@ -73,7 +74,7 @@ const Home = () => {
                                 <Card.Title>Activity of the Day</Card.Title>
                                 <Card.Text>Check out our latest activity for something to do as a family.</Card.Text>
                                 <Link to="/activities">
-                                    <button className="btn btn-primary">Read More</button>
+                                    <button className="btn btn-primary" aria-label="Read more about the activity of the day">Read More</button>
                                 </Link>
                             </Card.Body>
                         </Card>
