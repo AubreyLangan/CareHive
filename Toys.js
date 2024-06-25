@@ -1,51 +1,57 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import './Toys.css';
-
-const toysData = {
-    "0-2": [
-        { title: "Soft Blocks", description: "Safe and soft blocks for building"},
-        { title: "Rattles", description: "Colorful rattles that make soothing sounds."}
-    ],
-    "3-5": [
-        { title: "Building Sets", description: "Simple building sets to encourage creativity."},
-        { title: "Stuffed Animals", description: "Cuddly stuffed animals"}
-    ],
-    "6-8": [
-        {title: "Puzzle Games", description: "Interactive puzzle games."},
-        {title: "Action Figures", description: "Action figures from favorite shows."}
-    ],
-    "9-12": [
-        {title: "Board Games", description: "Fun and engaging board games."},
-        {title: "Science Kits", description: "Kits for conducting fun experiments."}
-    ],
-    "13+": [
-        { title: "Advanced Model Kits", description: "Challenging model kits for older children."},
-        { title: "Tech Gadgets", description: "Cool tech gadgets and toys."}
-    ]
-};
-
+    
 const Toys = () => {
     return (
         <Container>
             <h1>Toys by Age Group</h1>
-            {Object.keys(toysData).map(ageGroup => (
-                <div key={ageGroup} className="age-group-section">
-                    <h2>Age {ageGroup}</h2>
-                    <Row>
-                        {toysData[ageGroup].map((toy, index) => (
-                            <Col key={index} sm={12} md={6} lg={4} className="mb-4">
-                                <Card className="toy-card">
-                                    <Card.Body>
-                                        <Card.Title>{toy.title}</Card.Title>
-                                        <Card.Text>{toy.description}</Card.Text>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        ))}
-                    </Row>
-                </div>
-            ))}
+            <Row>
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card>
+                        <Card.Body>
+                            <Card.Title>0-2 Years</Card.Title>
+                            <Card.Text>Discover toys for children aged 0 to 2 years.</Card.Text>
+                            <Link to="/toys/0-2" className="btn btn-primary">Explore</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card>
+                        <Card.Body>
+                            <Card.Title>3-5 Years</Card.Title>
+                            <Card.Text>Discover toys for children aged 3 to 5 years.</Card.Text>
+                            <Link to="/toys/3-5" className="btn btn-primary">Explore</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card>
+                        <Card.Body>
+                            <Card.Title>6-8 Years</Card.Title>
+                            <Card.Text>Discover toys for children aged 6 to 8 years.</Card.Text>
+                            <Link to="/toys/6-8" className="btn btn-primary">Explore</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card.Body>
+                        <Card.Title>9-12 Years</Card.Title>
+                        <Card.Text>Discover toys for children aged 9 to 12 years.</Card.Text>
+                        <Link to="/toys/9-12" className="btn btn-primary">Explore</Link>
+                    </Card.Body>
+                </Col>
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card>
+                        <Card.Body>
+                            <Card.Title>13+</Card.Title>
+                            <Card.Text>Discover toys for children aged 13 and up.</Card.Text>
+                            <Link to="/toys/13plus" className="btn btn-primary">Explore</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
         </Container>
     );
 };
