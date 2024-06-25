@@ -33,6 +33,9 @@ const CustomNavbar = () => {
                         <LinkContainer to="/community">
                             <Nav.Link><i className='fas fa-users'></i>Community</Nav.Link>
                         </LinkContainer>
+                        <LinkContainer to="/toys">
+                            <Nav.Link><i className='fas fa-users'>Toys</i></Nav.Link>
+                        </LinkContainer>
                     </Nav>
                     <Button 
                         variant="outline-secoondary" 
