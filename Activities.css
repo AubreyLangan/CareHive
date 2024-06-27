@@ -1,10 +1,5 @@
-.age-group-card {
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.age-group-card:hover {
-    transform: scale(1.05);
+.age-group-section {
+    margin-bottom: 40px;
 }
 
 .activity-card {
@@ -13,5 +8,18 @@
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    height: 100%;
+}
+
+.activity-card:hover {
+    transform: scale(1.02);
+}
+
+.activity-card .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.activity-card .card-text {
+    font-size: 1rem;
+    color: #333;
 }
