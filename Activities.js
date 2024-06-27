@@ -1,30 +1,58 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
 import './Activities.css';
-
-const ageGroups = [
-    {ageRange: '0-2', label: 'Ages 0-2', link: '/activities/0-2'},
-    {ageRange: '3-5', label: 'Ages 3-5', link: '/activities/3-5'},
-    {ageRange: '6-8', label: 'Ages 6-8', link: '/activities/6-8'},
-    {ageRange: '9-12', label: 'Ages 9-12', link: '/activities/9-12'},
-    {ageRange: '13plus', label: 'Ages 13', link: '/activities/13plus'}
-];
 
 const Activities = () => {
     return (
         <Container>
             <h1>Activities by Age Group</h1>
             <Row>
-                {ageGroups.map((group, index) => (
-                    <Col key={index} sm={12} md={6} lg={4} className="mb-4">
-                        <LinkContainer to={group.link}>
-                            <Card className="age-group-card">
-                                <Card.Title>{group.label}</Card.Title>
-                            </Card>
-                        </LinkContainer>
-                    </Col>
-                ))}
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card className="activity-card">
+                        <Card.Body>
+                            <Card.Title>0-2 Years</Card.Title>
+                            <Card.Text>Discover activities for children 0 to 2 years old. </Card.Text>
+                            <Link to="/activities/0-2" className="btn btn-primary">Explore</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card className="activity-card">
+                        <Card.Body>
+                            <Card.Title>3-5 Years</Card.Title>
+                            <Card.Text>Discover activities for cildren 3 to 5 years old.</Card.Text>
+                            <Link to="/activities/3-5" className="btn btn-primary">Explore</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card className="activity-card">
+                        <Card.Body>
+                            <Card.Title>6-8 Years</Card.Title>
+                            <Card.Text>Discover activities for children 6 to 8 years old.</Card.Text>
+                            <Link to="/activities/6-8" className="btn btn-primary">Explore</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card className="activity-card">
+                        <Card.Body>
+                            <Card.Title>9-12 Years</Card.Title>
+                            <Card.Text>Discover activities for children 9 to 12 years old.</Card.Text>
+                            <Link to="/activities/9-12" className="btn btn-primary">Explore</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm={12} md={6} lg={4} className="mb-4">
+                    <Card className="activity-card">
+                        <Card.Body>
+                            <Card.Title>13+ Years</Card.Title>
+                            <Card.Text>Discover activities for children 13 years and older.</Card.Text>
+                            <Link to="/activities/13plus" className="btn btn-primary">Explore</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
             </Row>
         </Container>
     );
