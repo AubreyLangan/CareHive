@@ -8,6 +8,7 @@ import './Community.css';
 const Community = () => {
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
+    const [username, setUsername] = useState('');
 
     useEffect(() => {
         const unsubscribe = onSnapshot(collection(db, 'messages'), (snapshot) => {
@@ -24,8 +25,12 @@ const Community = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (newMessage.trim()) {
-            await addDoc(collection(db, 'messages'), { text: newMessage });
+            await addDoc(collection(db, 'messages'), { 
+                text: newMessage,
+                username: username 
+            });
             setNewMessage('');
+            setUsername('');
         }
     };
 
@@ -34,6 +39,18 @@ const Community = () => {
             <h1>Community</h1>
             <p>Join our community to connect with other parents and share your experiences.</p>
             <h2>Community Chat</h2>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group controlId="username">
+                    <Form.Label>Username</Form.Label>
+                    <Form.Control
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Enter your username"
+                        aria-label="Username"
+                    />
+                </Form.Group>
+            </Form>
             <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="newMessage">
                     <Form.Label>Type your message</Form.Label>
@@ -50,7 +67,7 @@ const Community = () => {
             <ListGroup className="mt-4">
                 {messages.map((message) => (
                     <ListGroup.Item key={message.id}>
-                        {message.text}
+                        <strong>{message.username}</strong> {message.text}
                     </ListGroup.Item>
                 ))}
             </ListGroup>
