@@ -34,14 +34,15 @@ const CustomNavbar = () => {
                             <Nav.Link><i className='fas fa-users'></i>Community</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/toys">
-                            <Nav.Link><i className='fas fa-users'>Toys</i></Nav.Link>
+                            <Nav.Link><i className='fas fa-cube'></i>Toys</Nav.Link>
                         </LinkContainer>
                     </Nav>
                     <Button 
                         variant="outline-secoondary" 
-                        onClick={toggleColorblindMode}>
+                        onClick={toggleColorblindMode}
                         aria-pressed={colorblindMode}
                         aria-label="Toggle colorblind mode"
+                    >
 
                         {colorblindMode ? 'Default Mode' : 'Colorblind Mode'}
                     </Button>
