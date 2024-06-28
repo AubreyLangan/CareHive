@@ -1,16 +1,9 @@
-import React, { useState } from 'react';
-import { Container, Nav, Navbar, Button } from 'react-bootstrap';
+import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './Navbar.css';
-import './ColorblindMode.css';
 
 const CustomNavbar = () => {
-    const [colorblindMode, setColorblindMode] = useState(false);
-
-    const toggleColorblindMode = () => {
-        setColorblindMode(!colorblindMode);
-        document.body.classList.toggle('colorblind-mode', !colorblindMode);
-    };
     return (
         <Navbar bg='dark' expand='lg' role='navigation'>
             <Container>
@@ -37,15 +30,6 @@ const CustomNavbar = () => {
                             <Nav.Link><i className='fas fa-cube'></i>Toys</Nav.Link>
                         </LinkContainer>
                     </Nav>
-                    <Button 
-                        variant="outline-secoondary" 
-                        onClick={toggleColorblindMode}
-                        aria-pressed={colorblindMode}
-                        aria-label="Toggle colorblind mode"
-                    >
-
-                        {colorblindMode ? 'Default Mode' : 'Colorblind Mode'}
-                    </Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
