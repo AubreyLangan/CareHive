@@ -1,0 +1,22 @@
+.colorblind-mode {
+    --primary-color:#0044cc;
+    --secondary-color: #ffcc00;
+    --background-color: #f2f2f2;
+    --text-color: #333333;
+}
+
+body.colorblind-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.colorblind-mode .nav {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.colorblind-mode .btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
