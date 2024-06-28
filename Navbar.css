@@ -1,11 +1,13 @@
 .navbar {
-    background-color: #ff69b4;
+    background-color: var(--primary-color, #007bff);
+    color: var(--text-color, #ffffff);
 }
 
 .navbar-brand-custom {
     font-size: 1.5em;
     font-weight: bold;
-    color: white;
+    color: #ff69b4;
+    background-color: #ff69b4;
 }
 
 .navbar-nav .nav-link {
@@ -16,7 +18,7 @@
 }
 
 .navbar-nav .nav-link:hover {
-    color: #f0f8ff;
+    color: #ff69b4;
 }
 
 .navbar-nav .nav-link i {
@@ -24,9 +26,10 @@
 }
 
 .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: #ff69b4;
 }
 
 .navbar-custom .navbar-collapse {
+    background-color: #ff69b4;
     justify-content: flex-end;
 }
