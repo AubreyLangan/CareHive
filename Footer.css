@@ -1,6 +1,6 @@
 .footer {
-    background-color: #343a40;
-    color: #f8f9fa;
+    background-color: var(--primary-color, #343a40);
+    color: var(--text-color, #ffffff);
 }
 
 .footer a {
