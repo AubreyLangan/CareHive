@@ -1,31 +1,24 @@
-.random-tip-generator {
-    text-align: center;
-    margin: 20px;
+.random-tip-card {
+    background-color: var(--card-background-color, #ffffff);
+    color: var(--card-text-color, #000000);
+    border: 1px solid var(--primary-color, #007bff);
     padding: 20px;
-    border: 2px solid #ff69b4;
-    border-radius: 10px;
-    background-color: #f0f8ff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.random-tip-generator h2 {
-    color: #ff69b4;
-}
-
-.tip {
-    margin: 20px 0;
-    font-size: 1.2em;
-    color: #333;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #ff69b4;
-    color: white;
+.random-tip-button {
+    background-color: var(--secondary-color, #ffc187);
+    color: var(--text-color, #ffffff);
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
-button:hover {
-    background-color: #ff1493;
+.random-tip-button:hover {
+    background-color: var(--primary-color, #0056b3);
+    color: var(--card-text-color, #ffffff);
 }
