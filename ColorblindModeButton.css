@@ -1,0 +1,21 @@
+.colorbling-toggle-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.colorblind-toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+.colorbling-toggle-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
