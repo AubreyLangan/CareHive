@@ -8,7 +8,7 @@ const Footer = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col md={6} className="text-center text-md-left mb-2 mb-md-0">
-                        <p className="mb-0"> 2024 CareHive. All Rights Reserved.</p>
+                        <p className="mb-0">© 2024 CareHive. All Rights Reserved.</p>
                     </Col>
                     <Col md={6} className="text-center text-md-right">
                         <a href="/privacy" className="text-light mx-2">Privacy Policy</a>
