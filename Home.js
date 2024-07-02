@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import './Home.css';
 import RandomTipGenerator from "../Components/RandomTipGenerator";
 import { Link, useNavigate } from 'react-router-dom';
+import './JoinNowButton.css';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Home = () => {
                 <p>
                     Your one-stop solution for parenting tips, activities, and community support.
                 </p>
-                <button className="btn btn-primary" onClick={handleJoinNowClick}>Join Now</button>
+                <button className="join-now-btn" onClick={handleJoinNowClick}>Join Now</button>
             </div>
             <section className="introduction">
                 <h2>About CareHive</h2>
