@@ -88,24 +88,24 @@ const Home = () => {
                     <Col md={4}>
                         <Card className="testimonial-card">
                             <Card.Body>
-                                <Card.Text></Card.Text>
-                                <Card.Footer></Card.Footer>
+                                <Card.Text>"As a first time mom, CareHive has been a lifesaver! The tips and activities are not only fun and engaging but also educational. It's great to have a community of parents to share experiences and advice with. Highly recommend!"</Card.Text>
+                                <Card.Footer>-Sarah M.</Card.Footer>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={4}>
                         <Card className="testimonial-card">
                             <Card.Body>
-                                <Card.Text></Card.Text>
-                                <Card.Footer></Card.Footer>
+                                <Card.Text>"I've tried several parenting apps, but CareHive stands out. The age-specific activities are perfect for keeping my kids entertained and learning. The community is a fantastic way to connect with other parents. A must have for any parent!"</Card.Text>
+                                <Card.Footer>-John D.</Card.Footer>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={4}>
                         <Card className="testimonial-card">
                             <Card.Body>
-                                <Card.Text></Card.Text>
-                                <Card.Footer></Card.Footer>
+                                <Card.Text>"CareHive is an amazing resource for parents. The activities are perfectly suited for my kids' age groups and keep them entertained for hours. The tips have helped me become a more confident and informed parent. I can't recommend this app enough!"</Card.Text>
+                                <Card.Footer>-Jessica T.</Card.Footer>
                             </Card.Body>
                         </Card>
                     </Col>
