@@ -114,7 +114,9 @@ const Home = () => {
             <section className="newsletter-signup">
                 <h2>Stay Updated</h2>
                 <p>Sign up for our newsletter to get the latest updates amd tips straight to your inbox.</p>
-                <Button variant="primary">Sign Up</Button>
+                <Link to="/newsletter-signup">
+                    <Button variant="primary">Sign Up</Button>
+                </Link>
             </section>
         </Container>
     );
