@@ -1,8 +1,20 @@
-import React from "react";
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Container, Button, Modal, Form, Card, Col, Row } from 'react-bootstrap';
 import './About.css';
 
 const About = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleShow = () => setShowModal(true);
+    const handleClose = () => setShowModal(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log("Form submitted");
+        handleClose();
+    };
+
     return (
         <Container className="about-page">
             <section className="intro">
@@ -54,7 +66,34 @@ const About = () => {
                 <p>
                     If you have any questions or feedback, feel free to contact us.
                 </p>
+                <Button variant="primary" onClick={handleShow}>
+                    Contact Us
+                </Button>
             </section>
+            <Modal show={showModal} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Contact Us</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group controlId="formName">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control type="text" placeholder="Enter your name" required></Form.Control>
+                        </Form.Group>
+                        <Form.Group controlId="formEmail">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control type="email" placeholder="Enter your email" required></Form.Control>
+                        </Form.Group>
+                        <Form.Group controlId="formMessage">
+                            <Form.Label>Message</Form.Label>
+                            <Form.Control as="textarea" rows={3} placeholder="Enter your message..."></Form.Control>
+                        </Form.Group>
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+                    </Form>
+                </Modal.Body>
+            </Modal>
         </Container>
     );
 };
