@@ -33,8 +33,24 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: var(--link-color);
-  border-color: var(--link-color);
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-primary:focus {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .5);
 }
 
 footer {
