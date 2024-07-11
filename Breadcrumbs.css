@@ -1,0 +1,26 @@
+.breadcrumb {
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #6c757d;
+    padding: 0 0 0.5rem;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.breadcrumb-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
